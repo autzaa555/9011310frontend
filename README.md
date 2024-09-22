@@ -45,8 +45,10 @@ npm run dev
     ├── postcss.config.mjs
     ├── tailwind.config.ts
     └── tsconfig.json
+```
+# 9011310frontend
 ```bash
-```"# 9011310frontend" 
+ 
 
 echo "# 9011310frontend" >> README.md
 git init
@@ -57,3 +59,4 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/autzaa555/9011310frontend.git
 git push -u origin main
+```
