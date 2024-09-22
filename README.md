@@ -5,13 +5,11 @@
 ```bash
 docker compose up -d
 ```
-
 2. Run Backend
-
 ```bash
 cd backend
-go mod tidy
-goose -dir ./migrations postgres postgres://devpool:123456789@localhost:5432/mydb up
+# go mod tidy
+# goose -dir ./migrations postgres postgres://devpool:123456789@localhost:5432/mydb up
 go run cmd/app/main.go
 ```
 
@@ -47,4 +45,15 @@ npm run dev
     ├── postcss.config.mjs
     ├── tailwind.config.ts
     └── tsconfig.json
+```bash
 ```"# 9011310frontend" 
+
+echo "# 9011310frontend" >> README.md
+git init
+git add README.md
+git add .
+git status
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/autzaa555/9011310frontend.git
+git push -u origin main
