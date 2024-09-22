@@ -25,18 +25,50 @@ npm run dev
 ```bash
 .
 ├── README.md
-├── compose.yml
+├── docker-compose.yml
 ├── .gitignore
 ├── .env
-├── backend
+├── go.mod
+├── go.sum
+├── #backend
 │   ├── cmd
-│   ├── go.mod
-│   ├── go.sum
+│   │   └──  app
+│   │        └──  main.go
+│   ├── data
+│   │    └──  db
+│   │
 │   ├── internal
+│   │   ├── constant
+│   │   │   └──  item.go
+│   │   ├── item
+│   │   │   ├── controller.go
+│   │   │   ├── repository.go
+│   │   │   └── service.go
+│   │   └── model
+│   │      └── item.go
 │   └── migrations
-└── frontend
+│       └── 20240921032817_create_item_table.sql
+└── #frontend
     ├── README.md
+    ├── .next    
     ├── app
+    │   ├── component
+    │   │   ├── button.tsx
+    │   │   └── navbar.tsx
+    │   ├── create
+    │   │   └── page.tsx
+    │   ├── edit
+    │   │   └── id
+    │   │       └── page.tsx
+    │   ├── fonts 
+    │   │   ├── GeistMonoVF.woff
+    │   │   └── GeistVF.woff
+    │   ├── table
+    │   │   └── page.tsx
+    │   ├── favicon.ico
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
     ├── next-env.d.ts
     ├── next.config.mjs
     ├── node_modules
