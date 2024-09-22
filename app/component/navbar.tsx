@@ -1,22 +1,22 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+"use client";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const navigation = [
-  { name: 'หน้าหลัก', href: '/' },
-  { name: 'เพิ่มสินค้า', href: '/create' },
-  { name: 'ล็อคอิน', href: '#' },
-  { name: 'สมัคใช้งาน', href: '#' },
+  { name: "หน้าหลัก", href: "/" },
+  { name: "เพิ่มสินค้า", href: "/create" },
+  { name: "ล็อคอิน", href: "#" },
+  { name: "สมัคใช้งาน", href: "#" },
 ];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function NavBars() {
   const router = useRouter(); // ใช้ useRouter สำหรับการนำทาง
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState('');
+  const [currentPath, setCurrentPath] = useState("");
 
   // Update the current path when the component mounts or the route changes
   useEffect(() => {
@@ -42,12 +42,32 @@ export default function NavBars() {
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
                 </svg>
               )}
             </button>
@@ -68,9 +88,9 @@ export default function NavBars() {
                     onClick={() => handleNavigation(item.href)} // ใช้ handleNavigation เมื่อกด
                     className={classNames(
                       item.href === currentPath
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium'
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "rounded-md px-3 py-2 text-sm font-medium"
                     )}
                   >
                     {item.name}
@@ -92,9 +112,9 @@ export default function NavBars() {
                 onClick={() => handleNavigation(item.href)} // ใช้ handleNavigation เมื่อกด
                 className={classNames(
                   item.href === currentPath
-                    ? 'bg-gray-900 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                  'block rounded-md px-3 py-2 text-base font-medium'
+                    ? "bg-gray-900 text-white"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                  "block rounded-md px-3 py-2 text-base font-medium"
                 )}
               >
                 {item.name}
